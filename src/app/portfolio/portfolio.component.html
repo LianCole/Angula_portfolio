@@ -23,15 +23,15 @@
 					><strong>
 						<em>Click To Checkout My Code.</em>
 					</strong></ng-template
-				><a
+				>
+                
+                <a
 					class="item-box m-2"
 					[placement]="[project['placement']]"
 					[ngbTooltip]="title"
 					rel="noreferrer"
 					aria-label="project(opens in a new tab)"
-					href="https://github.com/JayantGoel001/{{
-						project['project']
-					}}"
+					[href]="project['where'] !== 'hito' ? 'https://github.com/JayantGoel001/' + project['project'] : 'http://github.com/foxDev810/' + project['project']"
 					target="_blank"
 					><img
 						class="item-container img-fluid mx-auto"
